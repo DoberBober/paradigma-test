@@ -1,5 +1,5 @@
 @import 'helpers/mixins'
-// @import 'helpers/variables'
+@import 'helpers/variables'
 
 webfont('MuseoSans', 'MuseoSansCyrl-300', 300)
 webfont('MuseoSans', 'MuseoSansCyrl-500', 500)
@@ -13,6 +13,9 @@ body
 	min-height 100%
 	min-width 320px
 	margin 0
+	font-family 'MuseoSans', Arial, sans-serif
+	color var(--mainGrey)
+	background #f1e2d8
 
 button, input, textarea
 	font-family inherit
@@ -40,7 +43,7 @@ img
 	clip-path inset(100%)
 
 .container
-	max-width 1170px
+	max-width 1590px
 	margin 0 auto
 	padding 0 15px
 

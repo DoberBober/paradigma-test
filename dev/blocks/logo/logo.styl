@@ -1,2 +1,22 @@
 .logo
-    display block
+	display flex
+	align-items center
+	color var(--mainGrey)
+	text-decoration none
+
+.logo__text
+	max-width 148px
+	margin -5px 0 0 45px
+	font-weight 300
+	font-size 14px
+
+@media (max-width: 1365px)
+	.logo
+		margin 0 auto 30px
+
+@media (max-width: 579px)
+	.logo__img
+		max-width 60vw
+
+	.logo__text
+		display none

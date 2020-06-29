@@ -1,2 +1,60 @@
 .address
-    display block
+	display flex
+	align-items center
+	margin-left auto
+
+.address__img
+	margin-right 25px
+	border-radius 100%
+
+.address__wrap
+	position relative
+
+	strong
+		font-weight 700
+		font-size 16px
+
+	span
+		display table
+		font-weight 300
+		font-size 16px
+
+.address__link
+	font-weight 500
+	font-size 12px
+	text-transform uppercase
+	text-decoration none
+	color var(--mainPink)
+	border-bottom 2px dashed currentColor
+
+	&:hover, &:focus
+		border-bottom-style solid
+
+.address__popup
+	position absolute
+	left 50%
+	top 100%
+	padding-top 10px
+	transform translateX(-50%)
+	z-index 1
+	display none
+
+	iframe
+		max-width 100%
+
+.address__link:hover + .address__popup,
+.address__link:focus + .address__popup,
+.address__popup:hover
+	display block
+
+@media (max-width: 1365px)
+	.address
+		margin 0
+
+	.address__img
+		border 1px solid var(--mainPink)
+		width 40px
+		height 40px
+
+	.address__popup
+		display none !important

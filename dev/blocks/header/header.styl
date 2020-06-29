@@ -1,2 +1,88 @@
 .header
-    display block
+	padding-top 32px
+
+.header__container
+	display grid
+	grid-template-columns max-content 1fr
+	align-items center
+
+.header__wrap
+	display flex
+	align-items center
+
+@media (max-width: 1365px)
+	.header__container
+		display flex
+		flex-wrap wrap
+
+	.header__wrap
+		width 100%
+		justify-content space-between
+		justify-content space-evenly
+
+@media (min-width: 1024px)
+	.header__menuChecker, .header__contactsChecker
+		display none
+
+@media (max-width: 1023px)
+	.header__menuChecker, .header__contactsChecker
+		width 32px
+		height 32px
+		padding 0
+		display flex
+		align-items center
+		justify-content center
+		position fixed
+		top 30px
+		border none
+		background #fff
+		border-radius 100%
+		transition .25s
+		z-index 1
+
+		svg
+			fill var(--mainPink)
+			transition .25s
+
+	.header__menuChecker
+		left 15px
+
+	.header__contactsChecker
+		right 15px
+
+	.header__menuChecker--active
+		transform translateX(269px) rotate(90deg)
+		background var(--mainPink)
+
+		svg
+			fill #fff
+
+	.header__contactsChecker--active
+		transform translateX(-269px)
+		background var(--mainPink)
+
+		svg
+			fill #fff
+
+	.header__wrap
+		position fixed
+		right 0
+		top 0
+		width 320px
+		padding 17px 15px 17px 40px
+		background #fff
+		display block
+		height 100vh
+		transform translateX(100%)
+		visibility hidden
+		transition .25s
+
+	.header__wrap--active
+		transform translateX(0)
+		visibility visible
+
+	.header__menuChecker--active, .header__contactsChecker--active
+		z-index 3
+
+	.menu--active, .header__wrap--active
+		z-index 2

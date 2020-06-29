@@ -1,2 +1,65 @@
 .contacts
-    display block
+	margin-left 3.75%
+
+	svg
+		flex-shrink 0
+		padding 10px
+		margin-right 11px
+		background #fff
+		border-radius 100%
+		overflow visible
+		fill var(--mainPink)
+
+.contacts__wrap
+	display flex
+	align-items center
+
+	& + .contacts__wrap
+		margin-top 10px
+
+.contacts__status
+	display flex
+	align-items center
+	font-weight 500
+	font-size 12px
+
+	&::before
+		content ''
+		display block
+		width 6px
+		height 6px
+		border-radius 100%
+		margin-right 9px
+
+.contacts__status--online
+	&::before
+		background #27b24b
+
+.contacts__status--offline
+	&::before
+		background #ff0000
+
+.contacts__phone
+	font-weight 500
+	font-size 24px
+	color var(--mainGrey)
+	text-decoration none
+	white-space nowrap
+
+	&:hover, &:focus
+		text-decoration underline
+
+.contacts__schedule
+	font-weight 300
+	font-size 16px
+
+	b, strong
+		font-weight 700
+
+@media (max-width: 1365px)
+	.contacts
+		margin 25px 0 0
+
+		svg
+			background var(--mainPink)
+			fill #fff

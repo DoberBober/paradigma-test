@@ -1,8 +1,16 @@
 .header
 	.container.header__container
+		button(type="button" aria-label="Показать меню").header__menuChecker
+			+svgElement('menu', 16, 16)
+
 		include ../logo/logo.pug
-		include ../address/address.pug
-		include ../contacts/contacts.pug
-		include ../order/order.pug
+
+		button(type="button" aria-label="Показать контакты").header__contactsChecker
+			+svgElement('contacts', 16, 16)
+
+		.header__wrap
+			include ../address/address.pug
+			include ../contacts/contacts.pug
+			include ../order/order.pug
 
 	include ../menu/menu.pug
