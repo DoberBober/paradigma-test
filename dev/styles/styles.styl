@@ -1,0 +1,48 @@
+@import 'helpers/mixins'
+// @import 'helpers/variables'
+
+webfont('MuseoSans', 'MuseoSansCyrl-300', 300)
+webfont('MuseoSans', 'MuseoSansCyrl-500', 500)
+webfont('MuseoSans', 'MuseoSansCyrl-700', 700)
+
+html
+	height 100%
+	box-sizing border-box
+
+body
+	min-height 100%
+	min-width 320px
+	margin 0
+
+button, input, textarea
+	font-family inherit
+
+*, *::before, *::after
+	box-sizing inherit
+
+img
+	max-width 100%
+	height auto
+
+.sprite
+	display none
+
+.visually-hidden
+	position absolute
+	width 1px
+	height 1px
+	margin -1px
+	padding 0
+	border none
+	overflow hidden
+	white-space nowrap
+	clip rect(0,0,0,0)
+	clip-path inset(100%)
+
+.container
+	max-width 1170px
+	margin 0 auto
+	padding 0 15px
+
+// @import '../blocks/_mixins/**/*.styl'
+@import '../blocks/*/*.styl'

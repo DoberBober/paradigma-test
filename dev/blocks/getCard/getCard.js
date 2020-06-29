@@ -1,0 +1,1 @@
+//.getCard scripts goes here
