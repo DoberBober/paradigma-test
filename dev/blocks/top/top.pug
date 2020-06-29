@@ -1,1 +1,25 @@
-.top
+section.top
+	.top__parallax.top__parallax--left
+	.top__parallax.top__parallax--right
+	.container
+		p.top__heading Хотите избавиться от
+			b  нежелательных волос
+			|  или нужен сеанс
+			b антицеллюлитного массажа?
+
+		ul.top__list
+			li депиляция воском и Шугаринг;
+			li профессиональные сертифицированные мастера;
+			li работаем и с женщинами, и с мужчинами;
+			li результат уже после первой процедуры.
+
+		a(href="#").top__btn Получить карту клиента бесплатно
+
+	.top__info
+		button(type="button" aria-label="Нажмите, чтобы узнать подробнее о карте клиента")
+			+svgElement('info', 36, 36)
+		p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+	a(href="#" aria-hidden="true").top__next
+		+svgElement('down', 11, 7)
+		i
